@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card-centered {
+        width: 95%;
+        margin: 40px auto 0 auto;
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        .card-centered {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .card-centered {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .card-centered {
+            width: 60%;
+        }
+    }
+
+}
