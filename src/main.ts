@@ -8,10 +8,10 @@ import './assets/tailwind.css'
 
 // PrimeVue Temel Kurulum
 import PrimeVue from 'primevue/config'
-import 'primevue/resources/themes/lara-light-indigo/theme.css' // ✅ Geçerli tema
-import 'primevue/resources/primevue.css'                         // ✅ Temel PrimeVue stil dosyası
-import 'primeicons/primeicons.css'                              // ✅ İkon seti
-import 'primeflex/primeflex.css'                                // Opsiyonel: Grid ve spacing yardımcıları
+import 'primevue/resources/themes/lara-light-indigo/theme.css'
+import 'primevue/resources/primevue.css'                        
+import 'primeicons/primeicons.css'                             
+import 'primeflex/primeflex.css'                               
 
 // PrimeVue Bileşenleri
 import Card from 'primevue/card'
@@ -31,9 +31,6 @@ import Dialog from 'primevue/dialog'
 import ConfirmationService from 'primevue/confirmationservice'
 import Galleria from 'primevue/galleria'
 import Sidebar from 'primevue/sidebar'
-
-import Menubar from 'primevue/menubar';
-
 
 createApp(App)
     .use(store)

@@ -164,7 +164,7 @@ export default defineComponent({
 
     <div class="flex justify-between items-center mb-6 flex-wrap">
       <h2 class="text-2xl font-bold  flex items-center gap-2">
-        📝 Gönderi Listesi <span class="text-gray-500 text-base">({{ posts.length }})</span>
+        📝 Gönderi Listesi <Tag :value="posts.length.toString()" severity="info" />
       </h2>
 
       <div class="ml-auto">

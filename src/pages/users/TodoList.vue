@@ -56,7 +56,7 @@ const toggleTodoStatus = async (todo: Todo, newStatus: boolean) => {
     <Toast />
     <Card class="shadow-lg border-0">
       <template #header>
-        <div class="flex items-center gap-3 mt-5">
+        <div class="flex items-center gap-3 pt-5">
           <i class="pi pi-list text-2xl text-primary ml-2 "></i>
           <h2 class="text-2xl font-bold text-gray-800 m-0">
             Yapılacaklar

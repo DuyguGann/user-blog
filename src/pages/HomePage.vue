@@ -73,12 +73,12 @@ watch(() => route.path, updateCrumbs)
                 </span>
           </div>
 
-          <div class="overflow-y-auto">
+         <div class="overflow-y-auto">
             <ul class="list-none p-3 m-0">
               <li>
                 <router-link
                     to="/"
-                    class="flex items-center cursor-pointer p-3 rounded text-gray-700 hover:bg-gray-100 transition"
+                    class="no-underline flex items-center cursor-pointer p-3 rounded text-gray-700 hover:bg-gray-100 transition"
                 >
                   <i class="pi pi-home mr-2"></i>
                   <span class="font-medium">Dashboard</span>
@@ -87,7 +87,7 @@ watch(() => route.path, updateCrumbs)
               <li>
                 <router-link
                     to="/users"
-                    class="flex items-center cursor-pointer p-3 rounded text-gray-700 hover:bg-gray-100 transition"
+                    class="no-underline flex items-center cursor-pointer p-3 rounded text-gray-700 hover:bg-gray-100 transition"
                 >
                   <i class="pi pi-user mr-2"></i>
                   <span class="font-medium">Kullanıcılar</span>

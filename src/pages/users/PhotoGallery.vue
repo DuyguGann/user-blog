@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 import Dialog from 'primevue/dialog'
 import Galleria from 'primevue/galleria'
 import type { Photo } from '@/store/modules/photos'
+import Tag from "primevue/tag";
 const store = useStore()
 const route = useRoute()
 
@@ -25,7 +26,7 @@ const photosFromStore = computed(() => store.getters['photos/getPhotos'])
 const isLoading = computed(() => store.getters['photos/isLoading'])
 
 async function loadAlbums() {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
+  const response = await fetch(https://jsonplaceholder.typicode.com/albums?userId=${userId})
   albums.value = await response.json()
 }
 
@@ -33,7 +34,7 @@ async function openGallery(albumId: number) {
   selectedAlbumId.value = albumId
 
   const selectedAlbum = albums.value.find((a) => a.id === albumId)
-  galleryTitle.value = selectedAlbum ? `${selectedAlbum.title} – Fotoğraflar` : 'Albüm Fotoğrafları'
+  galleryTitle.value = selectedAlbum ? ${selectedAlbum.title} – Fotoğraflar : 'Albüm Fotoğrafları'
 
   await store.dispatch('photos/fetchPhotos', albumId)
 
@@ -41,8 +42,8 @@ async function openGallery(albumId: number) {
 
   const fakePhotos = originalPhotos.map((photo: Photo, index: number) => ({
     title: photo.title,
-    url: `https://picsum.photos/600/400?random=${albumId}_${index}`,
-    thumbnailUrl: `https://picsum.photos/150/100?random=${albumId}_${index}`
+    url: https://picsum.photos/600/400?random=${albumId}_${index},
+    thumbnailUrl: https://picsum.photos/150/100?random=${albumId}_${index}
   }))
 
   galleryPhotos.value = fakePhotos
@@ -69,7 +70,14 @@ onMounted(() => {
 
 <template>
     <div class="p-4 max-w-6xl mx-auto ">
-      <h2 class="text-2xl font-bold mb-6">Albüm Kartları</h2>
+      <div class="flex items-center gap-3 mt-5 mb-5 ml-2">
+        <i class="pi pi-images text-2xl text-primary mt-1"></i>
+        <div class="flex items-center gap-2">
+          <h2 class="text-2xl font-bold text-gray-800 m-0">Albüm Kartları</h2>
+          <Tag :value="albums.length.toString()" severity="info" />
+        </div>
+      </div>
+
       <div class="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-6">
         <div
             v-for="album in albums"
@@ -81,7 +89,7 @@ onMounted(() => {
             <template #header>
               <div class="w-full h-20 overflow-hidden">
                 <img
-                    :src="`https://picsum.photos/350/200?random=${album.id}`"
+                    :src="https://picsum.photos/350/200?random=${album.id}"
                     class="w-full h-full object-cover"
                     alt="Albüm kapak"
                 />
@@ -103,12 +111,6 @@ onMounted(() => {
           </Card>
         </div>
       </div>
-
-
-
-
-
-
 
       <Dialog
         v-model:visible="isModalVisible"
